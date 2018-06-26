@@ -1,8 +1,8 @@
 class DirectionOutput {
     constructor() {
         this.id = 'DirectionOutput';
-
-        this.count = 0;
+        this.checkArray = [0,0,0];
+        this.valid = false;
         this.currentSound = null;
         this.currentIcon = null;
         this.currentIndex = null;
@@ -24,7 +24,6 @@ class DirectionOutput {
         this.offScreen = document.createElement('div');
         this.offScreen.classList.add('output__speech'); 
 
-        let options = {};
 
         this.inputClasses = [];
         for (let index = 0; index < this.numClasses; index += 1) {
@@ -55,16 +54,18 @@ class DirectionOutput {
     }
 
 
+    checkValid(array, len) //check whether all classes has already been trained
+    {
 
-    filterResults() {
-        let phrase = this.searchInput.value;
-        if (phrase.length === 0) {
-            phrase = 'Hello';
+        for(let i =0;i<len;i++)
+        {
+            if(array[i]== 0)
+            {
+                return false;
+            }
         }
-        this.ttsItem.children[1].value = `"${phrase}"`;
-        this.ttsItem.value = `"${phrase}"`;
+        return true;
     }
-
 
 
     //the function in learning class will call this function 
@@ -74,8 +75,16 @@ class DirectionOutput {
             if (this.currentIndex !== index) {
              
                 this.currentIndex = index; //to get the correct index
-                this.count++;
+                //this.count++;
                 //remove border for the old index
+                this.checkArray[this.currentIndex]++;
+                if(this.valid === false)
+                {
+                    if(this.checkValid(this.checkArray,this.numClasses))
+                    {
+                        this.valid = true;
+                    }
+                }
                if (this.currentBorder && this.currentClassName) {
                     this.currentBorder.classList.remove(`output__speech-input--${this.currentClassName}-selected`);
                     
@@ -88,8 +97,10 @@ class DirectionOutput {
                 this.currentClassName = id;
                 this.currentBorder = border;
                 this.currentBorder.classList.add(`output__speech-input--${this.currentClassName}-selected`);
-                console.log(this.defaultMessages[index]);
-                
+                if(this.valid===true)//if all classes has already trained start print messages
+                {
+                    console.log(this.defaultMessages[index]);
+                }
             }
         }
         if (GLOBALS.clearing) {
