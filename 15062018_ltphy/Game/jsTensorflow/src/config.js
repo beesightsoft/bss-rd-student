@@ -55,6 +55,7 @@ let GLOBALS = {
 	},
 	numClasses: 3,
 	audioContext: new AudioContext(),
+	//socket: io();
     isBackFacingCam: false
 };
 

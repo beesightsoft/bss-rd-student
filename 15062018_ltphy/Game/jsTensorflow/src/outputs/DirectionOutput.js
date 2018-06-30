@@ -1,20 +1,36 @@
+var io = require('socket.io-client');
+var socket = io.connect('http://localhost:3000', {reconnect: true});
+
+// Add a connect listener
+socket.on('connect', function (socket) {
+    console.log('Connected!');
+});
+socket.on('disconnect',function(){
+    console.log('user disconnected'); 
+  });
 class DirectionOutput {
+
     constructor() {
         this.id = 'DirectionOutput';
+        /*this.script = document.createElement('script');
+        this.script.src = '/socket.io/socket.io.js';
+        document.getElementsByTagName('body')[0].appendChild(this.script);
+        this.script = document.createElement('script');
+        this.script.src = 'https://code.jquery.com/jquery-1.11.1.js';
+        document.getElementsByTagName('body')[0].appendChild(this.script);
+        */
         this.checkArray = [0,0,0];
         this.valid = false;
-        this.currentSound = null;
-        this.currentIcon = null;
         this.currentIndex = null;
-       this.textToSpeech = new TextToSpeech();
+
         this.element = document.createElement('div');
         this.element.classList.add('output__container');
         this.element.classList.add('output__container--speech');
-        
+        //this.socket = io();
         this.defaultMessages = [
-        'Left',
-        'Stand',
-        'Right'
+        'left',
+        'stand',
+        'right'
         ];
         //global
         this.classNames = GLOBALS.classNames;
@@ -67,8 +83,8 @@ class DirectionOutput {
         return true;
     }
 
-
-    //the function in learning class will call this function 
+    //var socket = io();
+    //the function in learning class will call this function
 
     trigger(index){
         if (!GLOBALS.clearing) {
@@ -100,7 +116,20 @@ class DirectionOutput {
                 if(this.valid===true)//if all classes has already trained start print messages
                 {
                     console.log(this.defaultMessages[index]);
+                    var value = this.defaultMessages[index];
+                   /* var io = require('socket.io-client');
+                    var socket = io.connect('http://localhost:3000', {reconnect: true});
+
+// Add a connect listener
+                    socket.on('connect', function (socket) {
+                    console.log('Connected!');
+                    });*/
+                    //var socket = io();
+                    socket.emit('chat', value);//this.defaultMessages[index]);
+                       
+                      
                 }
+               
             }
         }
         if (GLOBALS.clearing) {
@@ -128,7 +157,7 @@ class DirectionOutput {
 
 
 }
-import TextToSpeech from './speech/TextToSpeech.js';
+//import TextToSpeech from './speech/TextToSpeech.js';
 import GLOBALS from './../config.js';
-
+//import io from ''
 export default DirectionOutput;
