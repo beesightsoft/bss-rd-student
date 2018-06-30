@@ -18,20 +18,16 @@ public class CollideEvent : MonoBehaviour {
     public AudioClip scoreSound;
     public AudioClip crashSound;
     int highScore;
-    Color maskColor;
     public GameObject mask;
-    public float transitionSpeed = 0.05f;
-    bool isTransition = false;
+ 
     void Start () {
         inviTime = tmpTime;
-        maskColor = mask.GetComponent<Image>().color;
+
        
     }
     void GameOver()
     {
-        Debug.Log("call");
-        mask.SetActive(true);
-        isTransition = true;
+    
         if (PlayerPrefs.HasKey("HighScore"))
         {
             if (score.GetScore() > PlayerPrefs.GetInt("HighScore"))
@@ -65,21 +61,12 @@ public class CollideEvent : MonoBehaviour {
                 anim.SetActive(false);
             }
         }
-        if (isTransition)
-        {
-            maskColor.a -= transitionSpeed;
-            mask.GetComponent<Image>().color = maskColor;
-            if (maskColor.a <=0)
-            {
-                isTransition = false;
-            }
-        }
+       
     }
     public void StartTransition()
     {
-        Debug.Log("call");
+
         mask.SetActive(true);
-        isTransition = true;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -90,7 +77,7 @@ public class CollideEvent : MonoBehaviour {
         }
         else if (collision.gameObject.tag.Equals("CarEnemy"))
         {
-        
+            StartTransition();
             score.SetScore(int.Parse(TextGUI.GetComponent<Text>().text));
             GameOver();
             Destroy(gameObject);
@@ -99,7 +86,6 @@ public class CollideEvent : MonoBehaviour {
         }
         else if (collision.gameObject.tag.Equals("Garbage"))
         {
-            Debug.Log("hit");
             int t = int.Parse(TextGUI.GetComponent<Text>().text);
             t++;
             TextGUI.GetComponent<Text>().text = t.ToString();
