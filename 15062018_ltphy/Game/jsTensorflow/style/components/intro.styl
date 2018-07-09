@@ -1,5 +1,5 @@
 .intro {
-	background: #e9e9e9
+	background: #2c3641
 	position: fixed
 	z-index: 101
 	width: 100%
@@ -9,52 +9,77 @@
 	align-items: center
 }
 
-.intro__sharing {
-	flex: none
-	position: absolute
-	top: space(2)
-	right: space(2)
+.column {
+    float: left;
+    width: 60%;
+    padding: 5px;
+ 
 }
 
-.intro__share-link {
-	display: inline-block
-	width: 30px
-	height: 30px
-	margin: 0 0 0 space(0.5)
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    bottom:0;
+}
+.intro__line-right{
 	
-	svg {
-		margin: 15%
-		width: 70%
-		height: 70%
-		fill: #808184
-	}
-}
-
-.intro__share-link:hover svg {
-	fill: $color__blue--primary
+	border-right: 2px solid #ccc;
+	left: 0;
 }
 
 .intro__footer {
-	align-items: flex-end
+	align-items: flex-end //it will force to page cant scroll
 	bottom: 0px
 	display: flex
 	justify-content: space-between
-	left: 0
 	padding: space(2)
 	position: absolute
 	width: 100%
+
 }
 
-.intro__footer-link--left {
+.intro__footer-right{
+	
+	color:#f2f2f2
+	font-size: 12px
+	width:	100px
+	position: relative
+	text-decoration: none
+	top: 0
+
+}
+.intro__footer-left{
+	
+	color:#f2f2f2
+	font-size: 12px
 	width: 300px
+	position: relative
+	text-decoration: none
+	top: 0
+	left: 0
+}
+.intro__footer-link--left {
+	color:#ffffff
+	font-size: 15px
+	width: 300px
+	position: relative
+	text-decoration: none
+	top:0
+	font-weight:bold
 }
 
 .intro__footer-link--right {
-	color: #929395
-	font-size: 14px
+	color:#ffffff
+	font-size: 16px
+	width: 300px
 	position: relative
 	text-decoration: none
-	top: -5px
+	top:0
+	right: 12px
+	font-weight:bold
+	padding-right: 100px;
 }
 
 .intro__footer-image {
@@ -93,11 +118,17 @@
 	margin-top: space(1)
 	width: 100%
 }
-
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 .intro__title-image {
-	width: 100%
-	height: 220px
 
+	width: 90%
+	height: 90%
+	margin-top: 50px
 	&.intro__title-image--desktop{
 		display: block
 	}
@@ -116,12 +147,13 @@
 }
 
 .intro__text {
-	max-width: 420px
-	margin-top: space(5)
+	max-width: 420px	
+	margin-top: 0
 	margin-bottom: 0
 	margin-left: auto
 	margin-right: auto
 	white-space: nowrap
+	color: #ffffff
 }
 
 .intro__text-break {
@@ -216,13 +248,9 @@
 		}
 	}
 
-	.wizard__launch-skip {
-		font-size: 14px
-	}
-
 	.intro__title {
 		height: 70px
-		margin-bottom: space(1)
+		margin-bottom: space(0)
 		margin-top: 0
 	}
 

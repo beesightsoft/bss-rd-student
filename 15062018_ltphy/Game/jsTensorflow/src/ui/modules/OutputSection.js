@@ -103,22 +103,13 @@ class OutputSection {
         gtag('event', 'select_output', {'id': outputId});
     }
 
-    toggleSoundOutput(play) {
+   /* toggleSoundOutput(play) {
         if (this.currentOutput.id === 'SoundOutput' && play) {
             GLOBALS.soundOutput.playCurrentSound();
         }else if (this.currentOutput.id === 'SoundOutput' && !play) {
             GLOBALS.soundOutput.pauseCurrentSound();
         }
-    }
-
-    startWizardMode() {
-        this.broadcastEvents = true;
-    }
-
-    stopWizardMode() {
-        this.broadcastEvents = false;
-    }
-
+    }*/
     trigger(id) {
         let index = this.classNames.indexOf(id);
         this.currentOutput.trigger(index);

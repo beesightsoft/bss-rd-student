@@ -10,7 +10,7 @@
 
 .machine {
 	position: relative
-	background: $color__background
+	background: #2c3641
 	padding-top: space(8)
 	padding-bottom: space(10)
 	text-align: center
@@ -25,7 +25,7 @@
 	// align-items: center
 	justify-content: center
 	text-align: center
-	max-width: 1360px
+	max-width: 100%
 	margin-left: auto
 	margin-right: auto
 }
@@ -41,6 +41,7 @@
 .section__title {
 	height: 30px
 	line-height: 30px
+	color:#ffffff
 	@extend .uppercase
 	@extend .font__size--small
 }
@@ -327,9 +328,6 @@
 
 .output__selector-wrapper {
 	width: 100%
-	// width: 150px
-	// flex: none
-	// margin-right: space(1)
 	position: relative
 	display: flex
 	justify-content: space-around
@@ -342,7 +340,9 @@
 	// display: inline-block
 	flex: 1 1 1
 	cursor: pointer
-	margin: 0
+	margin-left: auto
+	margin-right: auto
+	align-items: center
 }
 
 .output_selector__option--selected {
@@ -738,13 +738,12 @@
 		top: -35px
 		width: 100%
 		margin: 0 auto
-
 		&.section__title--learning {
 			top: -30px
 		}
 
 		span {
-			background-color: #ededee
+			color: #f2f2f2
 		}
 	}
 	

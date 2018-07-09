@@ -16,54 +16,20 @@ class LaunchScreen {
     constructor() {
         this.element = document.querySelector('.intro');
 
-        this.startButton = new Button(document.querySelector('#start-tutorial-button'));
-        this.skipButton = document.querySelector('#skip-tutorial-button');
-        this.skipButtonMobile = document.querySelector('#skip-tutorial-button-mobile');
-
+        //innitilzae a start button from html
+        this.startButton = new Button(document.querySelector('#start-button'));
         this.messageIsCompatible = document.querySelector('#is-compatible');
         this.messageIsNotCompatible = document.querySelector('#is-not-compatible');
-
+        this.skipButtonMobile = document.querySelector('#skip-tutorial-button-mobile');
         this.startButton.element.classList.add('button--disabled');
-        document.querySelector('.wizard__launch-skip-paragraph').style.display = 'none';
+
         document.querySelector('.wizard__browser-warning').style.display = 'block';
 
-        let facebookButton = document.querySelector('.intro__share-link--facebook');
-        let twitterButton = document.querySelector('.intro__share-link--twitter');
-
-        let intro = document.querySelector('.intro__content-mobile');
-        /*eslint-disable */
-        let defaultPrevent = (event) => {
-            event.preventDefault();
-        };
-        /* eslint-enable*/
-        intro.addEventListener('touchstart', defaultPrevent);
-        intro.addEventListener('touchmove', defaultPrevent);
-
-
-        let loader = ((el) => {
-            let ajax = new XMLHttpRequest();
-            ajax.open('GET', 'assets/social-facebook.svg', true);
-            ajax.onload = (event) => {
-                el.innerHTML = ajax.responseText;
-            };
-            ajax.send();
-        })(facebookButton);
-
-        loader = ((el) => {
-            let ajax = new XMLHttpRequest();
-            ajax.open('GET', 'assets/social-twitter.svg', true);
-            ajax.onload = (event) => {
-                el.innerHTML = ajax.responseText;
-            };
-            ajax.send();
-        })(twitterButton);
-
-        facebookButton.addEventListener('click', this.openFacebookPopup.bind(this));
-        twitterButton.addEventListener('click', this.openTwitterPopup.bind(this));
+       
         
         if (GLOBALS.browserUtils.isCompatible === true && GLOBALS.browserUtils.isMobile === false) {
             this.startButton.element.classList.remove('button--disabled');
-            document.querySelector('.wizard__launch-skip-paragraph').style.display = 'block';
+            //document.querySelector('.wizard__launch-skip-paragraph').style.display = 'block';
             document.querySelector('.wizard__browser-warning').style.display = 'none';
         }
 
@@ -79,29 +45,40 @@ class LaunchScreen {
             this.messageIsNotCompatible.style.display = 'block';
         }
 
-        this.skipButton.addEventListener('click', this.skipClick.bind(this));
+       // this.skipButton.addEventListener('click', this.skipClick.bind(this));
         this.skipButtonMobile.addEventListener('touchend', this.skipClick.bind(this));
         this.skipButtonMobile.addEventListener('click', this.skipClick.bind(this));
         this.startButton.element.addEventListener('click', this.startClick.bind(this));
         this.startButton.element.addEventListener('touchend', this.startClick.bind(this));
     }
 
-    openFacebookPopup(event) {
-        event.preventDefault();
-        let url = event.currentTarget.getAttribute('href');
-        /* eslint-disable space-infix-ops */
-        window.open(url, 'fbShareWindow', 'height=450, width=550, top='+(window.innerHeight/2-275)+', left='+(window.innerWidth/2-225)+',toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-        /* eslint-enable space-infix-ops */
+
+
+    destroy() {
+        document.body.classList.remove('no-scroll');
+        this.element.style.display = 'none';        
+
     }
 
-    openTwitterPopup(event) {
-        event.preventDefault();
-        let url = event.currentTarget.getAttribute('href');
-        /* eslint-disable space-infix-ops */
-        window.open(url, 'fbShareWindow', 'height=450, width=600, top='+(window.innerHeight/2-150)+', left='+(window.innerWidth/2-225)+', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-        /* eslint-enable space-infix-ops */
-    }
+    startClick() {
+        let intro = document.querySelector('.intro');
+        let offset = intro.offsetHeight;
+        if (GLOBALS.browserUtils.isMobile || GLOBALS.browserUtils.isSafari) {
+            GLOBALS.inputSection.createCamInput();
+            GLOBALS.camInput.start();
+            GLOBALS.wizard.touchPlay();
+            let event = new CustomEvent('mobileLaunch');
+            window.dispatchEvent(event);
+        }
 
+        TweenMax.to(intro, 0.5, {
+            y: -offset,
+            onComplete: () => {
+                this.destroy();
+                GLOBALS.wizard.start();             
+            }
+        });
+    }
     skipClick(event) {
         event.preventDefault();
         let intro = document.querySelector('.intro');
@@ -126,32 +103,6 @@ class LaunchScreen {
                 if (!GLOBALS.browserUtils.isMobile) {
                     GLOBALS.wizard.startCamera();
                 }
-            }
-        });
-    }
-
-    destroy() {
-        document.body.classList.remove('no-scroll');
-        this.element.style.display = 'none';        
-
-    }
-
-    startClick() {
-        let intro = document.querySelector('.intro');
-        let offset = intro.offsetHeight;
-        if (GLOBALS.browserUtils.isMobile || GLOBALS.browserUtils.isSafari) {
-            GLOBALS.inputSection.createCamInput();
-            GLOBALS.camInput.start();
-            GLOBALS.wizard.touchPlay();
-            let event = new CustomEvent('mobileLaunch');
-            window.dispatchEvent(event);
-        }
-
-        TweenMax.to(intro, 0.5, {
-            y: -offset,
-            onComplete: () => {
-                this.destroy();
-                GLOBALS.wizard.start();             
             }
         });
     }

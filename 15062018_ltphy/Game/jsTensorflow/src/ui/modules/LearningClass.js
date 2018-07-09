@@ -162,7 +162,7 @@ class LearningClass {
 		GLOBALS.recording = true;
 		GLOBALS.classId = this.id;
 
-        GLOBALS.outputSection.toggleSoundOutput(false);
+        //GLOBALS.outputSection.toggleSoundOutput(false);
 
 		setTimeout(() => {
 			GLOBALS.webcamClassifier.buttonDown(this.id, this.canvas, this);
@@ -179,7 +179,7 @@ class LearningClass {
 		GLOBALS.classId = null;
 		GLOBALS.recording = false;
 
-        GLOBALS.outputSection.toggleSoundOutput(true);
+       // GLOBALS.outputSection.toggleSoundOutput(true);
 
 		GLOBALS.webcamClassifier.buttonUp(this.id, this.canvas);
 

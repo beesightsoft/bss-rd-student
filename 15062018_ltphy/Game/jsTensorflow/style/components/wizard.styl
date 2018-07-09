@@ -1,7 +1,7 @@
 .wizard {
-	width: 100vw
+	width: 100%
 	background: $color__black
-	position: relative
+	position: absolute
 }
 
 .wizard--fixed {
@@ -10,15 +10,14 @@
 }
 
 .wizard__wrapper {
-	position: relative
+	position: absolute
 	overflow: hidden
-	width: 100vw
+	width: 100%
 	z-index: 100
 }
 
 .wizard__inner {
-	width: 100vw
-	max-width: 1180px
+	width: 100%
 	padding: space(2) space(2)
 	margin: 0 auto
 	display: flex
@@ -32,7 +31,6 @@
 	height: 40px
 	margin: auto space(2) auto 0
 	background: $color__black
-	display: none
 }
 
 .wizard__sound-icon {
@@ -43,6 +41,7 @@
 	background-size: 100%
 	background-position-y: 0px
 	margin: 5px
+	display:none
 }
 
 .wizard__sound-icon.wizard__sound-icon--on {

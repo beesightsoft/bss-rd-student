@@ -1,34 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Teachable Machine</title>
+    <title> Action Learning - The AI Game </title>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/static/favicon/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="assets/static/favicon/favicon-152.png">
-    <link rel="shortcut icon" sizes="192x192" href="assets/static/favicon/favicon-192.png">
-
+    
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <meta name="fb:app_id" content="1442525379177526" />
-    <meta property="og:title" content="Teachable Machine" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://teachablemachine.withgoogle.com/" />
-    <meta property="og:image" content="https://teachablemachine.withgoogle.com/assets/static/share-image.jpg" />
-    <meta property="og:description" content="Teachable Machine: Explore machine learning, live in your browser." />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@google" />
-    <meta name="twitter:title" content="Teachable Machine" />
-    <meta name="twitter:description" content="Teachable Machine: Explore machine learning, live in your browser." />
-    <meta name="twitter:image" content="https://teachablemachine.withgoogle.com/assets/static/share-image.jpg" />
-
-    <meta itemprop="name" content="Teachable Machine">
-    <meta itemprop="description" content="Teachable Machine: Explore machine learning, live in your browser.">
-    <meta itemprop="image" content="/assets/static/share-image.jpg">
-
-
+    <meta name = "author" content = "Phy Lieng">
+    <meta name = "instructor" content = "Nhan Cao">
+    <meta name = "company" content = "BSS ltd">
+    <meta name = "Reference" content = "teachablemachine">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Caveat:700|Poppins:400,500,600,700" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
@@ -37,24 +21,19 @@
 <body class="no-scroll">
     <div class="wrapper">
         <div class="intro">
-            <div class="intro__sharing">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://teachablemachine.withgoogle.com" class="intro__share-link intro__share-link--facebook"></a>
-                <a href="https://twitter.com/home?status=Teachable%20Machine%3A%20Explore%20machine%20learning,%20live%20in%20your%20browser.%20No%20coding%20required%20%E2%86%92%20http%3A//g.co/teachablemachine%20%23teachablemachine" class="intro__share-link intro__share-link--twitter"></a>
-            </div>
             <div class="intro__inner">
-                <h1 class="intro__title"><span class="hidden-text">Teachable Machine</span><img
-                    src="assets/teachable-machine-splash-desktop.svg" alt="" class="intro__title-image intro__title-image--desktop"><img src="assets/teachable-machine-splash-desktop.svg" alt="" class="intro__title-image intro__title-image--mobile"></h1>
+                <h1 class="intro__title"><span class="hidden-text">Action Learning</span><img
+                    src="assets/13_1.png" alt="" class="intro__title-image intro__title-image--desktop center"><img src="assets/12_1.png" alt="" class="intro__title-image intro__title-image--mobile center"></h1>
                     <span class="intro__content-desktop">
-                        <p class="intro__text">Teach a machine using your camera,<span class="intro__text-break"></span> live in the browser. No coding required.</p>
+                        <p class="intro__text">Teach a machine using your camera,<span class="intro__text-break"></span> Enjoy the game by using your own action.</p>
                         <div class="intro__cta">
-                            <a href="#" class="button button--large button--color-blue" id="start-tutorial-button">
+                            <a href="#" class="button button--large button--color-green" id="start-button">
                                 <span class="button__content">
                                     <span class="icon icon--speaker">
                                     </span>
-                                    Let’s Go!
+                                    Let’s Play!
                                 </span>
                             </a>
-                            <p class="wizard__launch-skip-paragraph">or <a href="#" class="link wizard__launch-skip" id="skip-tutorial-button">skip the tutorial</a></p>
                             <p class="wizard__browser-warning">Sorry, your browser doesn’t support the latest technologies. <br>Download <a class="link" href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">Google Chrome</a> to use this and other experiments.</p>
                         </div>
                     </span>
@@ -65,6 +44,7 @@
                             <a href="#" class="link font__weight--semi-bold intro__content-mobile-ok-link"
                             id="skip-tutorial-button-mobile">GOT IT</a>
                         </p>
+                   
                     </span>
                     <span class="intro__content-mobile-incompatible" id="is-not-compatible">
                         Sorry, looks like your browser or device doesn't support this experiment. Learn more about
@@ -73,11 +53,14 @@
                         browser like Chrome.
                     </span>
                 </div>
-                <div class="intro__footer">
-                    <a href="https://experiments.withgoogle.com/ai" target="_blank" class="link intro__footer-link--left"><img
-                        src="./assets/footer-intro.svg" class="intro__footer-image"
-                        alt="Made with some friends at Google"></a>
-                        <a href="https://www.google.com/policies/" target="_blank" class="link link--grey intro__footer-link--right">Privacy &amp; Terms</a>
+                    <div class="intro__footer">
+                        
+                        <p class="intro__footer-left">Inspired from <span class="intro__text-break"></span> the idea of
+                         <a href="https://teachablemachine.withgoogle.com/" target="_blank" class="link link--grey intro__text-break intro__footer-link--left">TEACHABLE MACHINE</a> 
+                        </p>
+                        <p class="intro__footer-right">Made under<span class="intro__text-break"><a href="https://beesightsoft.com/" target="_blank" class ="intro__footer-link--right">BEESIGHTSOFT</a></span> 
+                        </p> 
+                       
                     </div>
                 </div>
                 <div class="machine" id="machine">
@@ -209,10 +192,12 @@
             <div class="section__container">
                 <div class="output__controls">
                     <div class="output__selector-wrapper">
-                        <div id="GIFOutput" class="output_selector__option output_selector__option--selected">GIF</div>
-                        <div id="SoundOutput" class="output_selector__option">Sound</div>
-                        <div id="SpeechOutput" class="output_selector__option">Speech</div>
-                        <div id="DirectionOutput" class = "output_selector__option">Direction</div>
+
+                        <div id="GIFOutput"></div>
+                        <div id="SoundOutput"></div>
+                        <div id="SpeechOutput"></div>
+                        <div id="DirectionOutput" class = "output_selector__option  output_selector__option--selected">Direction</div>
+                     
                     </div>
                 </div>
                 <div class="divider output__divider"></div>
@@ -223,18 +208,7 @@
 </div>
 <div class="wizard__wrapper">
     <div class="wizard" id="wizard">
-        <div class="wizard__inner">
-            <a href="#" class="wizard__sound-button">
-                <div class="wizard__sound-icon wizard__sound-icon--on"></div>
-            </a>
-            <div class="wizard__text">
-                <div class="wizard__text-inner"></div>
-                <div class="wizard__timer">
-                    <div class="wizard__timer-fill"></div>
-                </div>
-            </div>
-            <a href="#" class="wizard__skip-button">Skip<span> Tutorial</span></a>
-        </div>
+        
     </div>
 </div>
 <div class="recording" id="recording">
@@ -271,39 +245,19 @@
     </div>
 </div>
 <div class="faq-record-container">
-    <div class="faq">
-        <div class="record" id="record-open-section">
-            <a href="#" class="button button--large button--color-blue" id="open-recorder"><span class="button__content"><span class="icon icon--recorder"></span>Record a video</span></a>
-            <p class="record-text">Share your machine with a screen captured video.</p>
-        </div>
-        <div class="faq__inner">
-            <h3 class="faq__question">What is this?</h3>
-            <p class="faq__answer">This experiment lets anyone explore how machine learning works, in a fun, hands-on way. You can teach a machine to using your camera, live in the browser – no coding required. You train a <a href="https://www.youtube.com/watch?v=bHvf7Tagt18" target="_blank" class="link">neural network</a> locally on your device, without sending any images to a server. That’s how it responds so quickly to you. Watch this video to learn more:
-                <iframe class="faq__video" width="424" height="238" src="https://www.youtube.com/embed/3BhkeY974Rg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-            </p>
-            <h3 class="faq__question">What kind of things can I do?</h3>
-            <p class="faq__answer">Here are some links to things people have done so far: <a href="https://www.youtube.com/watch?v=LFHZtAasFXE&feature=youtu.be" class="link" target="_blank">Make your hand say moo</a>. <a href="https://www.youtube.com/watch?v=oP8-_0ZyY3U&feature=youtu.be" target="_blank" class="link">Rock out by wiggling your fingers</a>. And stay tuned, we’ll add more examples here soon. (Want to share something with us? Use the record button and share it on social media with #teachablemachine so we can check it out.)</p>
-            <h3 class="faq__question">Any tips I should keep in mind?</h3>
-            <p class="faq__answer">Capture at least 30 images per class. Be aware of when you’re pressing and releasing the button (that’s when it starts/stops capturing images). And you might need to capture lots of angles or variations of whatever it is you want your machine to recognize.</p>
-            <h3 class="faq__question">Why isn’t my machine working the way I want it to?</h3>
-            <p class="faq__answer">Don’t worry. Keep playing around. Seeing what works and what doesn’t is one way to explore how machine learning works. Keep in mind that your machine doesn’t have an understanding of higher level concepts, like faces or objects. It’s learning through the examples you give it. So if it’s not working the way you want, you might want to click the x to reset your classes and try out different approaches.</p>
-            <h3 class="faq__question">Where can I find more things like this?</h3>
-            <p class="faq__answer">Check out <a href="http://www.wekinator.org/" target="_blank" class="link">Wekinator</a> by Rebecca Fiebrink, one of the inspirations for this project. It lets anyone use machine learning through simple actions instead of code. <a href="http://ml4a.github.io/guides/" target="_blank" class="link">Here</a> are some interactive guides for learning about machine learning. And check out other fun projects like <a href="https://experiments.withgoogle.com/ai/objectifier-spatial-programming" target="_blank" class="link">this</a> and <a href="https://experiments.withgoogle.com/ai/giorgio-cam/view/" target="_blank" class="link">this</a>.</p>
-            <h3 class="faq__question">Are my images being stored on Google servers?</h3>
-            <p class="faq__answer">No. All the training is happening locally on your device.</p>
-            <h3 class="faq__question">How do I learn more about machine learning?</h3>
-            <p class="faq__answer"><a href="https://www.youtube.com/watch?v=bHvf7Tagt18" target="_blank" class="link">Here’s</a> an intro-level video explainer. <a href="http://playground.tensorflow.org" target="_blank" class="link">This</a> site lets you interact with neural networks in more detail. And this <a href="https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists/info" target="_blank" class="link">free online course</a> lets you dive in even deeper.</p>
-            <h3 class="faq__question">How was this built?</h3>
-            <p class="faq__answer">The image classification is powered by a <a href="https://www.youtube.com/watch?v=bHvf7Tagt18" target="_blank" class="link">neural network</a>. It was made possible by Nikhil Thorat and Daniel Smilkov, the team behind <a href="https://pair-code.github.io/deeplearnjs/" target="_blank" class="link">deeplearn.js</a>. It’s an open-source library that allows web developers to train and run machine learning models locally in the browser. The code for this experiment is open-sourced <a href="https://github.com/googlecreativelab/teachable-machine" target="_blank" class="link">here on Github</a>.</p>
-            <p class="faq__answer">We also made a boilerplate project which demonstrates how to use deeplearn.js to create projects of your own like Teachable Machine <a href="https://github.com/googlecreativelab/teachable-machine-boilerplate"  target="_blank" class="link">here</a>.</p>
-            <h3 class="faq__question">Who made this?</h3>
-            <p class="faq__answer">This experiment was a collaborative effort by friends from <a href="http://stoj.io" target="_blank" class="link">Støj</a>, <a href="https://useallfive.com/" target="_blank" class="link">Use All Five</a> and Creative Lab and PAIR teams at Google.</p>
-        </div>
-    </div>
+     <div class="record" id="record-open-section">
+         <a href="#" class="button button--large button--color-blue" id="open-recorder" style="display: none"><span class="button__content"><span class="icon icon--recorder"></span>Record a video</span></a>
+    
+      </div>
 </div>
 <footer class="footer">
-    <a href="https://experiments.withgoogle.com/ai" target="_blank" class="link"><img class="footer__image" src="./assets/footer.svg" alt="Made with some friends at Google"></a>
-    <a href="https://www.google.com/policies/" target="_blank" class="link link--privacy">Privacy &amp; Terms</a>
+            <p class="footer-left">Inspired from <span class="intro__text-break"></span> the idea of
+            <a href="https://teachablemachine.withgoogle.com/" target="_blank" class="link link--grey intro__text-break footer-link--left">TEACHABLE MACHINE</a> 
+            </p>
+                   
+            <p class="footer-right">Made under<span class="intro__text-break"><a href="https://beesightsoft.com/" target="_blank" class ="footer-link--right">BEESIGHTSOFT</a></span> 
+            </p> 
+
 </footer>
 <p id="input__media__activate" class="input__media__activate">
     <img src="./assets/arrows/arrow-4.svg" width="30" height="80">To teach your machine,
@@ -330,8 +284,8 @@
             typeof document.querySelector('.wizard__browser-warning').classList.forEach === 'function'
         )) {
         document.querySelector('.wizard__browser-warning').style.display = 'block';
-    document.querySelector('.wizard__launch-skip-paragraph').style.display = 'none';
-    document.getElementById('start-tutorial-button').style.display = 'none';
+    //document.querySelector('.wizard__launch-skip-paragraph').style.display = 'none';
+    document.getElementById('start-button').style.display = 'none';
     document.getElementById('is-compatible').style.display = 'none';
 }
 if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
