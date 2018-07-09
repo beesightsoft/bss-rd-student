@@ -1,0 +1,394 @@
+fileFormatVersion: 2
+guid: c22f5cde390980a4e8f14db7b571532b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: whiteSmoke_0
+    21300002: whiteSmoke_1
+    21300004: whiteSmoke_5
+    21300006: whiteSmoke_3
+    21300008: whiteSmoke1
+    21300010: whiteSmoke_5
+    21300012: whiteSmoke_2
+    21300014: whiteSmoke_3
+    21300016: whiteSmoke_4
+    21300018: whiteSmoke_12
+    21300020: whiteSmoke_13
+    21300022: whiteSmoke_7
+    21300024: whiteSmoke_8
+    21300026: whiteSmoke_16
+    21300028: whiteSmoke_6
+    21300030: whiteSmoke_18
+    21300032: whiteSmoke_19
+    21300034: whiteSmoke_20
+    21300036: whiteSmoke_21
+    21300038: whiteSmoke_22
+    21300040: whiteSmoke_23
+    21300042: whiteSmoke_24
+    21300044: whiteSmoke_25
+    21300046: whiteSmoke_26
+    21300048: whiteSmoke_27
+    21300050: whiteSmoke_28
+    21300052: whiteSmoke_29
+    21300054: whiteSmoke_30
+    21300056: whiteSmoke_11
+    21300058: whiteSmoke_32
+    21300060: whiteSmoke_33
+    21300062: whiteSmoke_10
+    21300064: whiteSmoke_35
+    21300066: whiteSmoke_36
+    21300068: whiteSmoke_37
+    21300070: whiteSmoke_38
+    21300072: whiteSmoke_39
+    21300074: whiteSmoke_40
+    21300076: whiteSmoke_41
+    21300078: whiteSmoke_42
+    21300080: whiteSmoke_43
+    21300082: whiteSmoke_44
+    21300084: whiteSmoke_45
+    21300086: whiteSmoke_46
+    21300088: whiteSmoke_47
+    21300090: whiteSmoke_48
+    21300092: whiteSmoke_49
+    21300094: whiteSmoke_9
+    21300096: whiteSmoke_51
+    21300098: whiteSmoke_52
+    21300100: whiteSmoke_53
+    21300102: whiteSmoke_54
+    21300104: whiteSmoke_55
+    21300106: whiteSmoke_56
+    21300108: whiteSmoke_57
+    21300110: whiteSmoke_58
+    21300112: whiteSmoke_59
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: whiteSmoke_5
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 281
+        width: 223
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f0aaaf0aee82045bd262c4ceb39649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 288
+        width: 60
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5c7252c80eab14290cdb5d25433a2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke_2
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 284
+        width: 100
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fb18a029366614d9fdbd5471cf0e72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke_3
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 285
+        width: 159
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b459be5a8c73177478bf8d50a45f277f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke_4
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 287
+        width: 194
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b502c116819730439889aa0a3bb9c19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke_7
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 151
+        width: 233
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e973f0e57525ebb41aa7a4b275d23332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke_8
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 156
+        width: 236
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0ecc6c8ae4b5044a3b1a24a21151a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 147
+        width: 231
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad10ad031b188a46ba783e0bd979966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke_11
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 28
+        width: 239
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a819791e244a62849852a7929a62b269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke_10
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 28
+        width: 242
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb141dc6f387af4991a958f33cb9559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteSmoke_9
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 29
+        width: 245
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec71fbafa6a373a488e5db0a526f587c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 52db0cd812430f143be1d4d246f22fbd
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
