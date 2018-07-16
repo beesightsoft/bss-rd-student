@@ -1,16 +1,12 @@
-# Teachable Machine 
+# Action Learning
 ## About
-Teachable Machine is an experiment that makes it easier for anyone to explore machine learning, live in the browser – no coding required. Learn more about the experiment and try it yourself on [g.co/teachablemachine](https://g.co/teachablemachine). 
+Action Learning is an intermediary website that uses machine learning to figure out human's movement for user purpose.
+Its layout was adjusted to be more convenient in term of the developer purpose.
+Action Learning is attached with WebSocket to use for player movement in Garbage Collector Game.
+It was made under BeesightSoft internship duration and is referenced from Teachable Machine (https://teachablemachine.withgoogle.com/)
 
 The experiment is built using the [deeplearn.js](https://github.com/PAIR-code/deeplearnjs) library.
 
-We have also released a boilerplate version of this project that can be used as a starting point for your own projects: [googlecreativelab/teachable-machine-boilerplate](https://github.com/googlecreativelab/teachable-machine-boilerplate)
-
-## Development
-#### Install dependencies by running (similar to `npm install`)
-```
-yarn
-```
 
 #### Build project
 ```
@@ -18,25 +14,16 @@ yarn build
 ```
 
 #### Start local server by running 
-```
-yarn run watch
-```
 
-#### Code Styles
-- There’s a pre-commit hook set up that will prevent commits when there are errors
-- Run `yarn eslint` for es6 errors & warnings
-- Run `yarn stylint` for stylus errors & warnings
-
-#### To run https locally:
-https is required to get camera permissions to work when not working with `localhost`
-
-1. Generate Keys
 ```
-openssl genrsa -out server.key 2048
-openssl req -new -x509 -sha256 -key server.key -out server.cer -days 365 -subj /CN=YOUR_IP
+node index.js
 ```
-2. Use `yarn run watch-https`
-3. Go to `https://YOUR_IP:3000`, then accept the insecure privacy notice, and proceed.
+### Access server
+
+Go to 
+```
+http:\\localhost:3000
+```
 
 ## Credit
-This is not an official Google product, but an experiment that was a collaborative effort by friends from [Støj](http://stoj.io/), [Use All Five](https://useallfive.com/) and Creative Lab and [PAIR](https://ai.google/pair/) teams at Google.
+Special Thank to 
