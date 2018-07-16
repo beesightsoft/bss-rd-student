@@ -3,7 +3,7 @@
 Action Learning is an intermediary website that uses machine learning to figure out human's movement for user purpose.
 Its layout was adjusted to be more convenient in term of the developer purpose.
 Action Learning is attached with WebSocket to use for player movement in Garbage Collector Game.
-It was made under BeesightSoft internship duration and is referenced from T[eachable Machine](https://teachablemachine.withgoogle.com/)
+It was made under BeesightSoft internship duration and is referenced from [Teachable Machine](https://teachablemachine.withgoogle.com/)
 
 The experiment is built using the [deeplearn.js](https://github.com/PAIR-code/deeplearnjs) library.
 
@@ -19,7 +19,6 @@ GOTO:
 yarn build
 ```
 #### Start local server by running 
-
 ```
 node index.js
 ```
@@ -27,7 +26,10 @@ node index.js
 Go to localhost:3000 to see your complete build. 
 The DirectionOutput acts as a client and send the 'order' to server.
 RECOMMENDED: Each order should be trained with 10 or more samples so that the output will give out the best result. 
-
+ERROR: deep_learn cannot be found.
+```
+npm i deeplearn
+```
 # GarbageCollector
 ### Run WebGL Game Version
 
