@@ -14,17 +14,27 @@ wss.on('connection', function (ws) {
     console.log('received: %s', message)
     premess = mess;
     mess = message;
-
-    //ws.send(mess);
+    //console.log(ws.OPEN);
+   // console.log(ws.readyState);
+  	//ws.send(mess);
   })//recieve message from client
 
-  if(this.readyState!==ws.CLOSED&& mess!== premess)
-  {	
-   setInterval(
-    	() => ws.send(`${mess}`),
-    	350
-  		)
-  }//set ping   interval for each emitted message*/
+ setInterval(
+      () =>{
+
+        if(ws.readyState===ws.OPEN &&mess!==premess) 
+          {
+            
+            //try{ws.send(`${mess}`);}catch(e){ }
+            ws.send(mess, function ack(error) {
+           // If error is not defined, the send has been completed, otherwise the error
+          // object will indicate what failed.
+            });
+ 
+          }
+        }, 
+      185
+      );//set ping interval for each e/*mitted message*/
   	//ws.send('${mess}')
 	ws.on('close', function() {
     // close user connection
@@ -32,7 +42,7 @@ wss.on('connection', function (ws) {
 
   });
 	ws.on('error',function(){
-		console.log(' state: '+ws.readyState);
+		console.log("something");
 	});
 
 })

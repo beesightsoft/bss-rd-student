@@ -1,5 +1,5 @@
 const ReconnectingWebSocket = require('reconnecting-websocket');
-var wsURL ='ws://192.168.1.94:9000';
+var wsURL ='ws://192.168.1.9:9000';
 const options = {
 	connectionTimeout: 1000,
 	maxRetries: 10,
