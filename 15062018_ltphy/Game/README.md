@@ -26,7 +26,7 @@ node index.js
 - Go to localhost:3000 to see your complete build. 
 - The DirectionOutput acts as a client and send the 'order' to server.
 
-RECOMMENDED: Each order should be trained with 10 or more samples so that the output will give out the best result.<br/>
+RECOMMENDED: Each order should be trained with 10 or more samples so that the output will give the best result.<br/>
 ERROR: deep_learn cannot be found. To solve:
 ```
 npm i deeplearn
