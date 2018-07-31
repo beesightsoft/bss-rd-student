@@ -38,9 +38,12 @@ setInterval(
           // object will indicate what failed.
             });
           }
-        }, 185);
+          premess = mess
+        }, 50);
 ```
-- The message will be sent after every 185ms.
+- The message will be sent after every 50ms.
+- The message can only be sent if the previous one is different from the new one.
+- If you want the server continuously send the message, throw the mess!=premess away.
 ### [ReconnectingWebSocket](https://github.com/pladaria/reconnecting-websocket)
 - The server is the same as WebSocket.
 - However i use ReconnectingWebSocket for the client of DirectionOutput.js.
