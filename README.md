@@ -1,7 +1,7 @@
 # bss-rd-student
 R&amp;D Topic for student
 
-| Name | Topic | Demo |
+| Topic | Description | Demo |
 | :--- | :--- | :--- |
-| Phy Lieng The (third-year student hcmus)  | Tensorflow: Object detection     | ...    |
-| --- | --- | --- |
+| Face Recognition | OpenFace, KNN     | [source & instruction](https://github.com/beesightsoft/bss-rd-student/tree/ltphy/15062018_ltphy/Tensorflow)    |
+| Action Learning + Garbage Collector| jsTensorflow + Unity | [GameBuild](https://github.com/beesightsoft/bss-rd-student/tree/ltphy/15062018_ltphy/Game/Demo) |
