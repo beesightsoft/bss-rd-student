@@ -8,35 +8,11 @@ var ws = new ReconnectingWebSocket(wsURL,[],options);
 ws.addEventListener('open', () => {
     ws.send('hello!');
 });
-	/*
-    var wsURL ='ws://192.168.1.9:9000';
-    var ws = new WebSocket(wsURL);
-    ws.onopen = function(){
-      console.log('connected!');
-    };
-    ws.onmessage = function(e){
-      //console.log(e.data);
-    };
-    ws.onclose = function(){
-      console.log('closed!');
-      //reconnect now
-    };
-    ws.onerror = function(error){
-        console.log(error);
-    };
 
-*/
 class DirectionOutput {
 
     constructor() {
         this.id = 'DirectionOutput';
-        /*this.script = document.createElement('script');
-        this.script.src = '/socket.io/socket.io.js';
-        document.getElementsByTagName('body')[0].appendChild(this.script);
-        this.script = document.createElement('script');
-        this.script.src = 'https://code.jquery.com/jquery-1.11.1.js';
-        document.getElementsByTagName('body')[0].appendChild(this.script);
-        */
         this.checkArray = [0,0,0];
         this.valid = false;
         this.currentIndex = null;
