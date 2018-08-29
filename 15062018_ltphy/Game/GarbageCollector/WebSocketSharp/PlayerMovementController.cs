@@ -9,6 +9,7 @@ public class PlayerMovementController : MonoBehaviour {
     bool currentPlatformAndroid = false;
     Vector3 position;
     protected string order = "";
+    public static WebSocket ws = null;
     void Awake()
     {
 #if UNITY_ANDROID
@@ -25,7 +26,7 @@ public class PlayerMovementController : MonoBehaviour {
            // Debug.Log(SettingStat.ServerURL);
             String URL = "ws://" + SettingStat.ServerURL;
 
-            var ws = new WebSocket(URL);
+            ws = new WebSocket(URL);
             ws.OnOpen += (sender, e) => ws.Send("Unity Client!");//lambda operator
             ws.OnMessage += (sender, e) =>
             {
